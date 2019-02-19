@@ -1,0 +1,19 @@
+body {
+    background-image: url('assets/images/dark-honeycomb.png');
+}
+
+.navbar.navbar-expand-lg.navbar-light.bg-dark a {
+    color: aliceblue;
+}
+
+.text-center {
+    margin-top: 20px;
+}
+
+.btn-space {
+    margin-left: 25px;
+}
+
+.list-group-item {
+    font-size: 300%;
+}
