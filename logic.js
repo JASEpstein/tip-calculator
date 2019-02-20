@@ -61,3 +61,16 @@ $('.plusminus').on('click', function () {
         }
     }
 });
+
+//TAXI - Click event for Quality Levels
+$('.taxiQuality').on('click', function () {
+    var percentage = $(this).attr('value');
+    var inputAmt = $('#inputAmt').val();
+    //Rounding Condition: If Bad Ride, round down; if Good Ride, round up!
+    if (percentage === "0.10") {
+        tipAmt = Math.round(inputAmt * percentage);
+    } else if (percentage === "0.15" || percentage === "0.20") {
+        tipAmt = Math.ceil(inputAmt * percentage);
+    }
+    $('#tipAmt').text('$' + tipAmt.toFixed(2));
+});
