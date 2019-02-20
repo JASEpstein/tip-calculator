@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="javascript" href="logic.js">
 
     <title>Tip Calculator</title>
 </head>
@@ -49,56 +48,64 @@
                     </ul>
                 </div>
                 <div class="card-body">
-                    <div class="input-group input-group-lg mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">$</span>
-                        </div>
-                        <input type="text" placeholder="Enter Total Here" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
-                    </div>
-
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Quality of Service</h5>
-                            <div class="btn-group-lg btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-danger btn-space">
-                                    <input type="radio" name="options" id="option1" autocomplete="off"> Bad
-                                </label>
-                                <label class="btn btn-primary btn-space">
-                                    <input type="radio" name="options" id="option2" autocomplete="off"> OK
-                                </label>
-                                <label class="btn btn-success btn-space">
-                                    <input type="radio" name="options" id="option3" autocomplete="off"> Great
-                                </label>
+                    <form action="logic.js">
+                        <div class="input-group input-group-lg mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">$</span>
                             </div>
+                            <input id="inputAmt" type="text" placeholder="Enter Total Here" class="form-control"
+                                autofocus aria-label="Dollar amount (with dot and two decimal places)">
                         </div>
-                    </div>
-
-                    <div class="card" style="margin-top: 15px;">
-                        <div class="card-body">
-                            <div class="card-header">
-                                Tip Amount:
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item" id="tipAmt">$0.00</li>
-                            </ul>
-                            <div class="card-header">
-                                Total Bill (w/Tip):
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item" id="totalAmt">$0.00</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <button type="button" class="btn btn-info btn-lg btn-block">Reset</button>
+                    </form>
                 </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Quality of Service</h5>
+                        <div class="btn-group-lg btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-danger btn-space quality" value='0.15'>
+                                <input type="radio" name="options" id="option1" value="0.15">
+                                Bad
+                            </label>
+                            <label class="btn btn-primary btn-space quality" value="0.18">
+                                <input type="radio" name="options" id="option2">
+                                OK
+                            </label>
+                            <label class="btn btn-success btn-space quality" value="0.22">
+                                <input type="radio" name="options" id="option3">
+                                Great
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 15px;">
+                    <div class="card-body">
+                        <div class="card-header">
+                            Tip Amount:
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" id="tipAmt">$0.00</li>
+                        </ul>
+                        <div class="card-header">
+                            Total Bill (w/Tip):
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" id="totalAmt">$0.00</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-info btn-lg btn-block" id="resetBtn">Reset</button>
             </div>
         </div>
+    </div>
     </div>
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script src="logic.js"></script>
