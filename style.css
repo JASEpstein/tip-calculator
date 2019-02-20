@@ -29,5 +29,17 @@ body {
 <i class="fas fa-pizza-slice"></i>  Food Delivery
 <i class="fas fa-glass-martini"></i>  Bar
 <i class="fas fa-suitcase"></i>  Hotel Staff
-<i class="fas fa-door-open"></i>  Take Away
+<i class="fas fa-car"></i> Taxi
+*/
+
+/* Media Queries to Change Tab Words to Icons
+@media only screen and (max-width: 320px) {
+    .nav-item span {
+        display: none;
+    }
+
+    .nav-item span:after {
+        content: "<i class="fas fa-receipt"></i>";
+    }
+}
 */
