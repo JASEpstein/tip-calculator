@@ -11,7 +11,12 @@ body {
 }
 
 .btn-space {
-    margin-left: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cardTitle {
+    margin-top: 5px;
 }
 
 .list-group-item {

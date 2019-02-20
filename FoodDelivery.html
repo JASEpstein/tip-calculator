@@ -58,21 +58,29 @@
                     </form>
                 </div>
 
+
+
                 <div class="card">
+                    <div class="card-header">
+                        <h5 class="cardTitle">Speed of Delivery:</h5>
+                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">Quality of Service</h5>
                         <div class="btn-group-lg btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-danger btn-space quality" value='0.15'>
-                                <input type="radio" name="options" id="option1" value="0.15">
-                                Bad
+                            <label class="btn btn-danger btn-space deliverySpeed" value='0'>
+                                <input type="radio" name="options" id="option1">
+                                Very Late
                             </label>
-                            <label class="btn btn-primary btn-space quality" value="0.18">
+                            <label class="btn btn-warning btn-space deliverySpeed" value='0.05'>
+                                <input type="radio" name="options" id="option1">
+                                Late
+                            </label>
+                            <label class="btn btn-primary btn-space deliverySpeed" value="0.10">
                                 <input type="radio" name="options" id="option2">
-                                OK
+                                On Time
                             </label>
-                            <label class="btn btn-success btn-space quality" value="0.22">
+                            <label class="btn btn-success btn-space deliverySpeed" value="0.15">
                                 <input type="radio" name="options" id="option3">
-                                Great
+                                Early
                             </label>
                         </div>
                     </div>

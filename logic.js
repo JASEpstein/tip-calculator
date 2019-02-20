@@ -5,6 +5,8 @@ PSEUDOCODE:
 2. User clicks quality level of service.
 3. Based on which level, the tip and bill amounts are displayed at the bottom
 
+Key Features:
+- If cash is typically used, the tip amounts are rounded to whole dollars.
 */
 
 var tipAmt = 0;
@@ -64,6 +66,19 @@ $('.plusminus').on('click', function () {
 
 //TAXI - Click event for Quality Levels
 $('.taxiQuality').on('click', function () {
+    var percentage = $(this).attr('value');
+    var inputAmt = $('#inputAmt').val();
+    //Rounding Condition: If Bad Ride, round down; if Good Ride, round up!
+    if (percentage === "0.10") {
+        tipAmt = Math.round(inputAmt * percentage);
+    } else if (percentage === "0.15" || percentage === "0.20") {
+        tipAmt = Math.ceil(inputAmt * percentage);
+    }
+    $('#tipAmt').text('$' + tipAmt.toFixed(2));
+});
+
+//FOOD DELIVERY - Click Event
+$('.deliverySpeed').on('click', function () {
     var percentage = $(this).attr('value');
     var inputAmt = $('#inputAmt').val();
     //Rounding Condition: If Bad Ride, round down; if Good Ride, round up!
