@@ -17,3 +17,17 @@ body {
 .list-group-item {
     font-size: 300%;
 }
+
+.plusminus {
+    font-size: 45px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/* ICONS
+<i class="fas fa-receipt"></i>  Restaurant
+<i class="fas fa-pizza-slice"></i>  Food Delivery
+<i class="fas fa-glass-martini"></i>  Bar
+<i class="fas fa-suitcase"></i>  Hotel Staff
+<i class="fas fa-door-open"></i>  Take Away
+*/

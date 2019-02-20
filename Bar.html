@@ -36,7 +36,7 @@
                             <a class="nav-link active" href="#">Bar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="TakeAway.html" tabindex="-1">Take Away</a>
+                            <a class="nav-link" href="TakeAway.html">Take Away</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="FoodDelivery.html">Food Delivery</a>
@@ -50,9 +50,9 @@
                     <form action="logic.js">
                         <div class="input-group input-group-lg mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text">$</span>
+                                <span class="input-group-text"><i class="fas fa-glass-martini"></i></span>
                             </div>
-                            <input id="inputAmt" type="text" placeholder="Enter Total Here" class="form-control"
+                            <input id="inputAmt" type="text" placeholder="How Many Drinks" class="form-control"
                                 autofocus aria-label="Dollar amount (with dot and two decimal places)">
                         </div>
                     </form>
@@ -60,21 +60,9 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Quality of Service</h5>
-                        <div class="btn-group-lg btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-danger btn-space quality" value='0.15'>
-                                <input type="radio" name="options" id="option1" value="0.15">
-                                Bad
-                            </label>
-                            <label class="btn btn-primary btn-space quality" value="0.18">
-                                <input type="radio" name="options" id="option2">
-                                OK
-                            </label>
-                            <label class="btn btn-success btn-space quality" value="0.22">
-                                <input type="radio" name="options" id="option3">
-                                Great
-                            </label>
-                        </div>
+                        <span id="barBtns"><i class="fas fa-plus-circle plusminus" value="+"></i> <i class="fas fa-minus-circle plusminus"
+                                value="-"></i></span>
+
                     </div>
                 </div>
 
@@ -85,12 +73,6 @@
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item" id="tipAmt">$0.00</li>
-                        </ul>
-                        <div class="card-header">
-                            Total Bill (w/Tip):
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item" id="totalAmt">$0.00</li>
                         </ul>
                     </div>
                 </div>

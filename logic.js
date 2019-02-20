@@ -25,3 +25,20 @@ $('#resetBtn').on('click', function () {
     $('#totalAmt').text('$0.00');
     $('#inputAmt').val('');
 });
+
+$('.plusminus').on('click', function () {
+    upOrDown = $(this).attr('value');
+    if (upOrDown === "+") {
+        up = $('#inputAmt').val();
+        ++up;
+        $('#inputAmt').val(up);
+    } else if (upOrDown === "-") {
+        down = $('#inputAmt').val();
+        if (down <= 0) {
+            return;
+        } else {
+            --down;
+            $('#inputAmt').val(down);
+        }
+    }
+});
