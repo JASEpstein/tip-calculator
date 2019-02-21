@@ -81,11 +81,23 @@ $('.taxiQuality').on('click', function () {
 $('.deliverySpeed').on('click', function () {
     var percentage = $(this).attr('value');
     var inputAmt = $('#inputAmt').val();
-    //Rounding Condition: If Bad Ride, round down; if Good Ride, round up!
-    if (percentage === "0.10") {
-        tipAmt = Math.round(inputAmt * percentage);
-    } else if (percentage === "0.15" || percentage === "0.20") {
-        tipAmt = Math.ceil(inputAmt * percentage);
+    var tipAmtRnd = 0;
+    //Rounding Condition: If using Cash, round 
+    if ($('#defaultCheck1').is(':checked')) {
+        $('#totalBillHeader').text('Total Bill: ');
+        if (percentage === "0.05") {
+            tipAmtRnd = Math.round(inputAmt * percentage);
+        } else if (percentage === "0.10" || percentage === "0.15") {
+            tipAmtRnd = Math.ceil(inputAmt * percentage);
+        }
+        $('#tipAmt').text('$' + tipAmtRnd.toFixed(2));
+        totalAmt = (Math.round((inputAmt) * 100) / 100) + (Math.round((tipAmt) * 100) / 100);
+        $('#totalAmt').text('$' + totalAmt.toFixed(2));
+    } else {
+        //No Rounding if not using cash
+        tipAmt = Math.round((inputAmt * percentage) * 100) / 100;
+        totalAmt = (Math.round((inputAmt) * 100) / 100) + (Math.round((tipAmt) * 100) / 100);
+        $('#tipAmt').text('$' + tipAmt.toFixed(2));
+        $('#totalAmt').text('$' + totalAmt.toFixed(2));
     }
-    $('#tipAmt').text('$' + tipAmt.toFixed(2));
 });
