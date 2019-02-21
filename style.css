@@ -29,6 +29,43 @@ body {
     margin-left: 20px;
 }
 
+.form-check-input {
+    width: 45px;
+    height: 45px;
+    margin-top: -0.7rem;
+    margin-left: -4.25rem;
+}
+
+.form-check-label {
+    font-size: 18px;
+    position: relative;
+    left: -11px;
+    top: -3px;
+}
+
+#dropdownMenu2 {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.dropdown-menu {
+    width: 300px !important;
+}
+
+#valetIcon {
+    margin-right: 14px;
+}
+
+#bellmanIcon {
+    padding-left: 6px;
+    margin-right: 22px;
+}
+
+#foodIcon {
+    padding-left: 2px;
+    margin-right: 18px;
+}
+
 /* ICONS
 <i class="fas fa-receipt"></i>  Restaurant
 <i class="fas fa-pizza-slice"></i>  Food Delivery
